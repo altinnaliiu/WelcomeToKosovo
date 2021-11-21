@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Hiking">
+    <com.denzcoskun.imageslider.ImageSlider
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:id="@+id/slider"
+        app:auto_cycle="true"
+        app:delay="0"
+        app:period="1000"
+        app:corner_radius="5">
+
+
+    </com.denzcoskun.imageslider.ImageSlider>
+
+
+    <androidx.cardview.widget.CardView
+        android:onClick="expand"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:contentPadding="20dp">
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kultura"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_500"
+                />
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trashëgimia Materiale e Kosovës është krijuar në mes të qytetërimeve antike, dhe asaj pas erës së Re, e cila trashëgon një thesar të pasur kulturor, dhe është pjesë e trashëgimisë kulturore botërore. Kjo trashëgimi e pasur, gjendet në çdo pjesë të Kosovës"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="333dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/veshje" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:text="VESHJET TRADICIONALE: në Kosovë kanë një vend të veçantë në Trashëgiminë Kulturore të Kosovës.E para është, një plis prej leshi dhe në formë të konit, ndërsa për femrat është një kokore me zakonisht ngjyrë të kuqe."
+                android:textSize="15sp"
+                android:textStyle="bold"
+
+                tools:text=" " />
+
+            <ImageView
+                android:id="@+id/foto2"
+                android:layout_width="400dp"
+                android:layout_height="333dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/kullat"
+                android:baselineAlignBottom="true"
+                />
+
+
+            <TextView
+                android:id="@+id/sharrtekst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/foto2"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="KULLA: është një shtëpi e lartë prej guri me dy a tri kate. Zakonisht ndërtimi i kullës bëhej në vënde të ngritura dhe shërbente si banesë. Dritaret e vogla dhe frenxhit shërbenin për vrojtim (shikim) dhe mbrojtje nga sulmet e ndryshme. Kati i dytë përbëhej nga odat (dhomat) e miqve."
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>
